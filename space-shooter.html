@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>🚀 Space Shooter Demo</title>
+<style>
+  body {
+    margin: 0;
+    background: black;
+    overflow: hidden;
+  }
+  canvas {
+    display: block;
+    margin: auto;
+    background: radial-gradient(circle at center, #000010, #000);
+  }
+</style>
+</head>
+<body>
+<canvas id="game"></canvas>
+
+<script>
+const canvas = document.getElementById("game");
+const ctx = canvas.getContext("2d");
+canvas.width = 400;
+canvas.height = 600;
+
+// Player
+const player = { x: canvas.width/2 - 20, y: canvas.height - 60, w: 40, h: 40, speed: 6 };
+
+// Bullets & Enemies
+let bullets = [];
+let enemies = [];
+let score = 0;
+
+// Controls
+let keys = {};
+document.addEventListener("keydown", e => keys[e.code] = true);
+document.addEventListener("keyup", e => keys[e.code] = false);
+
+// Shoot
+document.addEventListener("keydown", e => {
+  if (e.code === "Space") {
+    bullets.push({ x: player.x + 17, y: player.y, w: 6, h: 10 });
+  }
+});
+
+// Game loop
+function update() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+  // Player movement
+  if (keys["ArrowLeft"] && player.x > 0) player.x -= player.speed;
+  if (keys["ArrowRight"] && player.x + player.w < canvas.width) player.x += player.speed;
+
+  // Draw player
+  ctx.fillStyle = "cyan";
+  ctx.fillRect(player.x, player.y, player.w, player.h);
+
+  // Move bullets
+  bullets.forEach((b, i) => {
+    b.y -= 8;
+    if (b.y < 0) bullets.splice(i, 1);
+    ctx.fillStyle = "yellow";
+    ctx.fillRect(b.x, b.y, b.w, b.h);
+  });
+
+  // Spawn enemies
+  if (Math.random() < 0.02) {
+    enemies.push({ x: Math.random() * (canvas.width - 40), y: -40, w: 40, h: 40 });
+  }
+
+  // Move enemies
+  enemies.forEach((e, i) => {
+    e.y += 3;
+    if (e.y > canvas.height) enemies.splice(i, 1);
+    ctx.fillStyle = "red";
+    ctx.fillRect(e.x, e.y, e.w, e.h);
+  });
+
+  // Collision detection
+  bullets.forEach((b, bi) => {
+    enemies.forEach((e, ei) => {
+      if (b.x < e.x + e.w && b.x + b.w > e.x && b.y < e.y + e.h && b.y + b.h > e.y) {
+        bullets.splice(bi, 1);
+        enemies.splice(ei, 1);
+        score++;
+      }
+    });
+  });
+
+  // Score
+  ctx.fillStyle = "white";
+  ctx.font = "18px Arial";
+  ctx.fillText("Score: " + score, 10, 20);
+
+  requestAnimationFrame(update);
+}
+
+update();
+</script>
+</body>
+</html>
