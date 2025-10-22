@@ -1,101 +1,81 @@
 # 🚀 Space Shooter Game
 
-![Made with JavaScript](https://img.shields.io/badge/Made%20with-JavaScript-yellow?style=for-the-badge)
-![HTML5](https://img.shields.io/badge/HTML5-orange?style=for-the-badge)
-![CSS3](https://img.shields.io/badge/CSS3-blue?style=for-the-badge)
+![Made with HTML, CSS, JS](https://img.shields.io/badge/Made%20with-HTML/CSS/JS-blue?style=for-the-badge)
 ![Status](https://img.shields.io/badge/Status-Completed-brightgreen?style=for-the-badge)
 
 ---
 
-### 🎮 My First Web Development Project
-
-**Developer:** Pavan Kumar
-
-Welcome to **Space Shooter**, a simple yet thrilling **arcade-style browser game** built entirely with **HTML, CSS, and JavaScript**.
-This project marks the beginning of my journey into web development — where logic meets creativity. 🌌
+## 🎮 About
+**Space Shooter** is an arcade-style browser game built entirely with **HTML, CSS, and JavaScript**.  
+Control a rocket to destroy enemies, avoid collisions, and score points.  
+Features include **rocket-shaped player, 3 lives, sound effects, scoring, and a restart button**.  
 
 ---
 
 ## 🌟 Features
-
-* 🛸 Smooth player movement using arrow keys
-* 💥 Shooting bullets with the Spacebar
-* 👾 Random enemy spawning and movement
-* 🔢 Real-time scoring system
-* 🔄 Continuous game loop for endless fun
-
----
-
-## 🧩 Built With
-
-* **HTML5** → Game area using the `<canvas>` element
-* **CSS3** → Styling and background aesthetics
-* **JavaScript (Vanilla)** → Core game mechanics and logic
+- Custom rocket-shaped player 🚀  
+- Shoot bullets with Spacebar 💥  
+- Random enemy spawning 👾  
+- Player has 3 lives ❤️  
+- Game Over screen + Restart button 🔁  
+- Sound effects for shooting, explosions, and Game Over 🎵  
+- Real-time scoring 🏆  
 
 ---
 
 ## 🕹️ How to Play
-
-| Action     | Key      |
-| :--------- | :------- |
-| Move Left  | ⬅️ Arrow |
+| Action | Key |
+|--------|-----|
+| Move Left | ⬅️ Arrow |
 | Move Right | ➡️ Arrow |
-| Shoot      | Spacebar |
+| Shoot | Spacebar |
 
-🎯 **Goal:** Destroy as many enemy ships as possible to increase your score!
-
----
-
-## 🧠 What I Learned
-
-* Implementing **keyboard controls** for player movement
-* Using the **Canvas API** for 2D graphics
-* Managing **arrays of objects** (bullets, enemies)
-* Applying **collision detection** logic
-* Creating a **real-time game loop** with `requestAnimationFrame()`
+**Goal:** Destroy as many enemies as possible without losing all lives.
 
 ---
 
-## ⚙️ How to Run Locally
+## ⚙️ How to Run
 
-1. Clone the repository
+### Option 1: Run Locally
+1. Download or clone the repository.  
+2. Open **`index.html`** in any modern browser (Chrome, Firefox, Edge).  
+3. Start playing immediately.
 
-   ```bash
-   git clone https://github.com/yourusername/space-shooter-game.git
-   ```
-2. Open the project folder
-3. Double-click `index.html` to run it in your browser
+### Option 2: Run Online via GitHub Pages
+1. Push `index.html` to a GitHub repository.  
+2. Go to **Settings → Pages**.  
+3. Choose **Branch: main → / (root)**, click **Save**.  
+4. Open the provided link to play online.  
 
 ---
 
-## 🌐 Live Demo
-
-> 🚀 Coming Soon via GitHub Pages
-> *(After enabling Pages in Settings → Pages → Branch: main → Save)*
+## 🧠 What You Learn
+- Keyboard controls for movement  
+- Drawing a rocket with Canvas API  
+- Managing bullets and enemies arrays  
+- Collision detection and game logic  
+- Adding sound effects  
+- Restartable arcade game setup  
 
 ---
 
 ## 🪐 Future Enhancements
-
-* Background stars animation 🌠
-* Explosions and sound effects 🔊
-* Difficulty progression with enemy waves 👾
-* Lives & Game Over screen ❤️
+- Animated starry background 🌌  
+- Multiple enemy types and levels 👾  
+- Power-ups and upgrades ✨  
+- High score leaderboard 🏆  
 
 ---
 
 ## 💬 About Me
-
-Hi, I’m **Pavan Kumar**, an aspiring **Web Developer** and **Tech Learner** who enjoys building fun, interactive projects to strengthen my coding skills.
-This game is just the start — many more creations to come! ✨
+I’m **Pavan Kumar**, an aspiring **Web Developer** and tech learner.  
+This project is one of my first **interactive web arcade games** using HTML, CSS, and JavaScript.  
 
 ---
 
 ### 🏷️ Tags
-
-`#HTML` `#CSS` `#JavaScript` `#GameDevelopment` `#WebDevelopment` `#LearningByDoing` `#FirstProject`
+`#HTML` `#CSS` `#JavaScript` `#GameDevelopment` `#ArcadeGame` `#LearningByDoing` `#FirstProject`  
 
 ---
 
-### 🌟 Made with ❤️ by [Pavan Kumar]
-
+### 🌟 Made with ❤️ by [Pavan Kumar](https://github.com/pavankumar2109)
